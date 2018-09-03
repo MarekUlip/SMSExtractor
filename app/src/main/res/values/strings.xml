@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SMSExtractor</string>
+    <string name="back_up_made">Archivation completed.</string>
+    <string name="collect_text">Collect</string>
+    <string name="collected">Entries collected. Click the button at the bottom to proceed with archivation.</string>
+    <string name="action_settings">Settings</string>
+    <string name="last_access">Last archived message number</string>
+    <string name="nothing_to_archive">There is nothing to archive.</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_messages">Messages</string>
+</resources>
