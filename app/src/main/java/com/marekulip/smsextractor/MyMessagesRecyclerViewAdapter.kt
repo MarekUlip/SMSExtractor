@@ -1,5 +1,8 @@
 package com.marekulip.smsextractor
 
+import android.content.Context
+import android.graphics.Color
+import android.os.Build
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +19,7 @@ import java.util.*
  * specified [OnListFragmentInteractionListener].
  */
 class MyMessagesRecyclerViewAdapter(
-        var mValues: List<SMS>)
+        var mValues: List<SMS>,val mContext: Context)
     : RecyclerView.Adapter<MyMessagesRecyclerViewAdapter.ViewHolder>() {
 
     private val calendar = Calendar.getInstance()
@@ -32,6 +35,11 @@ class MyMessagesRecyclerViewAdapter(
         holder.mIdView.text = item.id.toString()
         holder.mContentView.text = item.smsBody
         holder.mIsSender.text = (if (item.isSender) "Recieved" else "Sent")
+        if (item.isSender) {
+            holder.mView.setBackgroundColor(Color.GREEN)
+        } else{
+            holder.mView.setBackgroundColor(Color.TRANSPARENT)
+        }
         calendar.time = Date(item.time)
         holder.mTime.text = calendar.time.toString()
     }

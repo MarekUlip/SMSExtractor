@@ -53,7 +53,7 @@ class MessagesFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = LinearLayoutManager(context)
-                adapter = MyMessagesRecyclerViewAdapter(smsmes)
+                adapter = MyMessagesRecyclerViewAdapter(smsmes,context)
                 mAdapter = adapter as MyMessagesRecyclerViewAdapter
             }
         }
